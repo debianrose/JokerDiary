@@ -1,11 +1,18 @@
 [package]
-name = "jokerdiary"
+name = "JokerServer"
 version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-tauri = { version = "1.0", features = ["api-all"] }
+actix-web = "4.4"
+actix-rt = "2.9"
 serde = { version = "1.0", features = ["derive"] }
-
-[build-dependencies]
-tauri-build = { version = "1.0" }
+serde_json = "1.0"
+sqlx = { version = "0.7", features = ["runtime-tokio-rustls", "sqlite"] }
+tokio = { version = "1.0", features = ["full"] }
+bcrypt = "0.15"
+jsonwebtoken = "9.0"
+chrono = { version = "0.4", features = ["serde"] }
+uuid = { version = "1.0", features = ["v4"] }
+log = "0.4"
+env_logger = "0.10"
